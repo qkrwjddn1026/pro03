@@ -14,7 +14,7 @@ import kr.go.ui4u.model.TourDAO;
 
 import com.oreilly.servlet.MultipartRequest;
 
-
+/*
 @WebServlet("/ImgUploadCtrl.do")
 public class ImgUploadCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -56,3 +56,4 @@ public class ImgUploadCtrl extends HttpServlet {
 	}
 
 }
+*/

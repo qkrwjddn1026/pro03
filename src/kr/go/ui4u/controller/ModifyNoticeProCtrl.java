@@ -13,12 +13,12 @@ import kr.go.ui4u.model.NoticeDAO;
 
 @WebServlet("/ModifyNoticeProCtrl.do")
 public class ModifyNoticeProCtrl extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=UTF-8");
+private static final long serialVersionUID = 1L;
+protected void service(HttpServletRequest request, HttpServletResponse response) 
+throws ServletException, IOException {
+request.setCharacterEncoding("UTF-8");
+response.setCharacterEncoding("UTF-8");
+response.setContentType("text/html; charset=UTF-8");
 		
 		int no = Integer.parseInt(request.getParameter("no"));
 		String title = request.getParameter("title");
@@ -36,6 +36,4 @@ public class ModifyNoticeProCtrl extends HttpServlet {
 			response.sendRedirect("GetNoticeListCtrl.do");
 		} else {
 			response.sendRedirect("ModifyNoticeCtrl?no="+no);
-		}
-	}
-}
+		}}}

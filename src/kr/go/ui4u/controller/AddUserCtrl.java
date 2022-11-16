@@ -54,10 +54,10 @@ public class AddUserCtrl extends HttpServlet {
 			e.printStackTrace();
 		} 
         
-		if(cnt>=1){	//이미 있는 아이디임
+		if(cnt>=1){	
 			result = false;
 			response.sendRedirect("./user/signUp.jsp?qid="+id);
-		} else { //없는 아이디인 경우 회원 가입
+		} else { 
 			result = true;
 			user.setId(id);
 			user.setPw(encrypted);

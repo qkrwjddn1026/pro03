@@ -54,3 +54,9 @@ CREATE TABLE USER(
 
 INSERT INTO user(id,pw,NAME,tel,addr,email,birth) VALUES ("pjw","1234","박정우","01012345678","김포","qjw@naver.com","1999/10/26");
 COMMIT;
+
+CREATE TABLE pic(
+	NO INT PRIMARY KEY AUTO_INCREMENT,
+	tourno INT NOT NULL,
+	picname VARCHAR(30) NOT NULL,
+	
