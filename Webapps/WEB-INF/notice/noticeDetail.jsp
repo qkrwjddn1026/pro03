@@ -38,6 +38,7 @@
 		      <td>
 		      	<fmt:parseDate value="${dto.regDate }" var="regdate" pattern="yyyy-MM-dd HH:mm:ss" />
 		      	<fmt:formatDate value="${regdate }" pattern="yyyy-MM-dd" />
+		      </td>
 		    </tr>
 		    <tr>
 		      <th>읽은 횟수</th>
@@ -47,8 +48,10 @@
 		</table>
 		<div class="buttons">
 		  <a href="${path1 }/GetNoticeListCtrl.do" class="button is-info">목록</a>
-		  <a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-danger">글 삭제</a>
-		  <a href="${path1 }/ModifyNoticeCtrl.do?no=${dto.no }" class="button is-warning">글 수정</a>
+		  <c:if test='${sid.equals("admin") }'>
+			  <a href="${path1 }/DelNoticeCtrl.do?no=${dto.no }" class="button is-danger">글 삭제</a>
+			  <a href="${path1 }/ModifyNoticeCtrl.do?no=${dto.no }" class="button is-warning">글 수정</a>
+		  </c:if>
 		</div>
     </div>
   </section>

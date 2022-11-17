@@ -54,7 +54,25 @@ CREATE TABLE USER(
 
 INSERT INTO user(id,pw,NAME,tel,addr,email,birth) VALUES ("pjw","1234","박정우","01012345678","김포","qjw@naver.com","1999/10/26");
 COMMIT;
+CREATE TABLE pic(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	tourno VARCHAR(20),
+	picname VARCHAR(150)
+);
+ALTER TABLE pic ADD COLUMN pos INT default 1; 
 
+CREATE TABLE tour(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	tourno VARCHAR(20),	-- 카테고리 타입 - 마지막 레코드의 no+1
+	cate VARCHAR(20),
+	place VARCHAR(100),
+	comment1 VARCHAR(1000),
+	comment2 VARCHAR(1000)  
+);
+
+COMMIT;
+DESC tour;
+DESC pic;
 CREATE TABLE pic(
 	NO INT PRIMARY KEY AUTO_INCREMENT,
 	tourno INT NOT NULL,
