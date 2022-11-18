@@ -73,8 +73,30 @@ CREATE TABLE tour(
 COMMIT;
 DESC tour;
 DESC pic;
-CREATE TABLE pic(
-	NO INT PRIMARY KEY AUTO_INCREMENT,
-	tourno INT NOT NULL,
-	picname VARCHAR(30) NOT NULL,
-	
+
+CREATE TABLE impress(
+	no INT PRIMARY KEY AUTO_INCREMENT,
+	cate VARCHAR(20),
+	tourno VARCHAR(20),
+	id VARCHAR(30),
+	content VARCHAR(1000),
+	star DOUBLE,
+	imgSrc VARCHAR(150),
+	regdate DATETIME DEFAULT NOW()
+);
+DESC impress;
+
+select * from impress;
+
+CREATE TABLE qna(
+no INT PRIMARY KEY AUTO_INCREMENT,
+title VARCHAR(100) NOT NULL,
+content VARCHAR(1000) NOT NULL,
+author VARCHAR(20) NOT NULL,
+regdate DATETIME default NOW(),
+lev INT DEFAULT 0,
+parno INT,
+sec CHAR(1),
+visited INT DEFAULT 0
+);
+DESC qna;

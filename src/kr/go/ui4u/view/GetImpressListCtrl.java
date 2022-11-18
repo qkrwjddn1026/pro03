@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.go.ui4u.dto.NoticeDTO;
-import kr.go.ui4u.model.NoticeDAO;
+import kr.go.ui4u.dto.ImpressDTO;
+import kr.go.ui4u.model.ImpressDAO;
 
 
-@WebServlet("/GetNoticeListCtrl.do")
-public class GetNoticeListCtrl extends HttpServlet {
+@WebServlet("/GetImpressListCtrl.do")
+public class GetImpressListCtrl extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
@@ -25,9 +25,11 @@ public class GetNoticeListCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
-		NoticeDAO dao = new  NoticeDAO();
+		ImpressDAO dao = new  ImpressDAO();
 
-		ArrayList<NoticeDTO> notiList = dao.getNoticeList();
-		request.setAttribute("list", notiList);
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/noticeList.jsp");
-		view.forward(request, response);	}}
+		ArrayList<ImpressDTO> impList = dao.getImpressList();
+		request.setAttribute("list", impList);
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/impress/impressList.jsp");
+		view.forward(request, response);	
+		}
+	}

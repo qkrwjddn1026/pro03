@@ -28,13 +28,15 @@
       <form class="form" action="GetPlaceSearchCtrl.do" method="post">
       	<div class="select inline">
       	<select>
-      		<option value="">제목</option>
-      		<option value="">글 내용</option>
-      		<option value="">제목 + 글 내용</option>
+      		<option value="">선택</option>
+      		<option value="place">장소명</option>
+      		<option value="comment2">장소설명</option>
+      		<option value="palce+comment2">장소명+장소설명</option>
       	</select>
       	
       	</div>
-      	<input type="text" name="search" id="search">
+      	<input type="text" name="keyword" id="keyword" class="input inline" placeholder="검색어 입력" required>
+      	<input type="submit" class="button is-primary inline" value="검색">
       </form>
 		<table class="table">
 		  <thead>
